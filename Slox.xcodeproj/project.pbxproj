@@ -13,6 +13,16 @@
 		CD1BEAAF27EF5AAF0020357D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1BEA9D27EF5AAE0020357D /* ContentView.swift */; };
 		CD1BEAB027EF5AAF0020357D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD1BEA9E27EF5AAF0020357D /* Assets.xcassets */; };
 		CD1BEAB127EF5AAF0020357D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD1BEA9E27EF5AAF0020357D /* Assets.xcassets */; };
+		CD1BEABD27EF5D110020357D /* SloxEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1BEABC27EF5D110020357D /* SloxEditor.swift */; };
+		CD1BEABE27EF5D110020357D /* SloxEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1BEABC27EF5D110020357D /* SloxEditor.swift */; };
+		CD1BEAC027EF62B90020357D /* Lox.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1BEABF27EF62B90020357D /* Lox.swift */; };
+		CD1BEAC127EF62B90020357D /* Lox.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1BEABF27EF62B90020357D /* Lox.swift */; };
+		CD1BEAC327EF66300020357D /* Scanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1BEAC227EF66300020357D /* Scanner.swift */; };
+		CD1BEAC427EF66300020357D /* Scanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1BEAC227EF66300020357D /* Scanner.swift */; };
+		CD1BEAC627EF69210020357D /* TokenType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1BEAC527EF69210020357D /* TokenType.swift */; };
+		CD1BEAC727EF69210020357D /* TokenType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1BEAC527EF69210020357D /* TokenType.swift */; };
+		CD1BEAC927EF6BF90020357D /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1BEAC827EF6BF90020357D /* Token.swift */; };
+		CD1BEACA27EF6BF90020357D /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1BEAC827EF6BF90020357D /* Token.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +32,13 @@
 		CD1BEAA327EF5AAF0020357D /* Slox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Slox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD1BEAA927EF5AAF0020357D /* Slox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Slox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD1BEAAB27EF5AAF0020357D /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		CD1BEABA27EF5C420020357D /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		CD1BEABB27EF5C420020357D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		CD1BEABC27EF5D110020357D /* SloxEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SloxEditor.swift; sourceTree = "<group>"; };
+		CD1BEABF27EF62B90020357D /* Lox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lox.swift; sourceTree = "<group>"; };
+		CD1BEAC227EF66300020357D /* Scanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scanner.swift; sourceTree = "<group>"; };
+		CD1BEAC527EF69210020357D /* TokenType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenType.swift; sourceTree = "<group>"; };
+		CD1BEAC827EF6BF90020357D /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +62,8 @@
 		CD1BEA9627EF5AAE0020357D = {
 			isa = PBXGroup;
 			children = (
+				CD1BEABA27EF5C420020357D /* LICENSE */,
+				CD1BEABB27EF5C420020357D /* README.md */,
 				CD1BEA9B27EF5AAE0020357D /* Shared */,
 				CD1BEAAA27EF5AAF0020357D /* macOS */,
 				CD1BEAA427EF5AAF0020357D /* Products */,
@@ -54,8 +73,13 @@
 		CD1BEA9B27EF5AAE0020357D /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				CD1BEA9C27EF5AAE0020357D /* SloxApp.swift */,
 				CD1BEA9D27EF5AAE0020357D /* ContentView.swift */,
+				CD1BEABF27EF62B90020357D /* Lox.swift */,
+				CD1BEAC227EF66300020357D /* Scanner.swift */,
+				CD1BEA9C27EF5AAE0020357D /* SloxApp.swift */,
+				CD1BEABC27EF5D110020357D /* SloxEditor.swift */,
+				CD1BEAC827EF6BF90020357D /* Token.swift */,
+				CD1BEAC527EF69210020357D /* TokenType.swift */,
 				CD1BEA9E27EF5AAF0020357D /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -176,8 +200,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD1BEABD27EF5D110020357D /* SloxEditor.swift in Sources */,
+				CD1BEAC927EF6BF90020357D /* Token.swift in Sources */,
 				CD1BEAAE27EF5AAF0020357D /* ContentView.swift in Sources */,
 				CD1BEAAC27EF5AAF0020357D /* SloxApp.swift in Sources */,
+				CD1BEAC627EF69210020357D /* TokenType.swift in Sources */,
+				CD1BEAC327EF66300020357D /* Scanner.swift in Sources */,
+				CD1BEAC027EF62B90020357D /* Lox.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,8 +214,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD1BEABE27EF5D110020357D /* SloxEditor.swift in Sources */,
+				CD1BEACA27EF6BF90020357D /* Token.swift in Sources */,
 				CD1BEAAF27EF5AAF0020357D /* ContentView.swift in Sources */,
 				CD1BEAAD27EF5AAF0020357D /* SloxApp.swift in Sources */,
+				CD1BEAC727EF69210020357D /* TokenType.swift in Sources */,
+				CD1BEAC427EF66300020357D /* Scanner.swift in Sources */,
+				CD1BEAC127EF62B90020357D /* Lox.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

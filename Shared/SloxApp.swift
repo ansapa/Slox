@@ -11,7 +11,11 @@ import SwiftUI
 struct SloxApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            #if os(macOS)
+            ContentView().frame(minWidth: 600, maxWidth: .infinity, minHeight: 350, maxHeight: .infinity)
+            #else
+                ContentView()
+            #endif
         }
     }
 }
