@@ -17,8 +17,14 @@ struct ContentView: View {
             }) { Text("Run") }
             GeometryReader { metrics in
                 VStack {
+                    #if os(macOS)
                     SloxEditor(text: $code)
                         .frame(height: metrics.size.height * 0.75)
+                    #else
+                    TextEditor(text: $code)
+                        .frame(height: metrics.size.height * 0.75)
+                        .font(.system(size: 14, design: .monospaced))
+                    #endif
                     ScrollView {
                         Text(output)
                             .frame(width: metrics.size.width, alignment: .leading)

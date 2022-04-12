@@ -13,7 +13,6 @@
 		CD1BEAAF27EF5AAF0020357D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1BEA9D27EF5AAE0020357D /* ContentView.swift */; };
 		CD1BEAB027EF5AAF0020357D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD1BEA9E27EF5AAF0020357D /* Assets.xcassets */; };
 		CD1BEAB127EF5AAF0020357D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD1BEA9E27EF5AAF0020357D /* Assets.xcassets */; };
-		CD1BEABD27EF5D110020357D /* SloxEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1BEABC27EF5D110020357D /* SloxEditor.swift */; };
 		CD1BEABE27EF5D110020357D /* SloxEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1BEABC27EF5D110020357D /* SloxEditor.swift */; };
 		CD1BEAC027EF62B90020357D /* Lox.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1BEABF27EF62B90020357D /* Lox.swift */; };
 		CD1BEAC127EF62B90020357D /* Lox.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1BEABF27EF62B90020357D /* Lox.swift */; };
@@ -23,6 +22,10 @@
 		CD1BEAC727EF69210020357D /* TokenType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1BEAC527EF69210020357D /* TokenType.swift */; };
 		CD1BEAC927EF6BF90020357D /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1BEAC827EF6BF90020357D /* Token.swift */; };
 		CD1BEACA27EF6BF90020357D /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1BEAC827EF6BF90020357D /* Token.swift */; };
+		CD3590C72801D35400510576 /* Expr.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3590C62801D35400510576 /* Expr.swift */; };
+		CD3590C82801D35400510576 /* Expr.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3590C62801D35400510576 /* Expr.swift */; };
+		CD3590CA2802AF5300510576 /* AstPrinter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3590C92802AF5300510576 /* AstPrinter.swift */; };
+		CD3590CB2802AF5300510576 /* AstPrinter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3590C92802AF5300510576 /* AstPrinter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +42,9 @@
 		CD1BEAC227EF66300020357D /* Scanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scanner.swift; sourceTree = "<group>"; };
 		CD1BEAC527EF69210020357D /* TokenType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenType.swift; sourceTree = "<group>"; };
 		CD1BEAC827EF6BF90020357D /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		CD3590C42801C63600510576 /* GenerateAST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateAST.swift; sourceTree = "<group>"; };
+		CD3590C62801D35400510576 /* Expr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Expr.swift; sourceTree = "<group>"; };
+		CD3590C92802AF5300510576 /* AstPrinter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstPrinter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,8 +70,10 @@
 			children = (
 				CD1BEABA27EF5C420020357D /* LICENSE */,
 				CD1BEABB27EF5C420020357D /* README.md */,
-				CD1BEA9B27EF5AAE0020357D /* Shared */,
+				CD1BEB0328002E820020357D /* Generated */,
 				CD1BEAAA27EF5AAF0020357D /* macOS */,
+				CD1BEA9B27EF5AAE0020357D /* Shared */,
+				CD1BEB0028002D390020357D /* Tools */,
 				CD1BEAA427EF5AAF0020357D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -73,11 +81,11 @@
 		CD1BEA9B27EF5AAE0020357D /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				CD3590C92802AF5300510576 /* AstPrinter.swift */,
 				CD1BEA9D27EF5AAE0020357D /* ContentView.swift */,
 				CD1BEABF27EF62B90020357D /* Lox.swift */,
 				CD1BEAC227EF66300020357D /* Scanner.swift */,
 				CD1BEA9C27EF5AAE0020357D /* SloxApp.swift */,
-				CD1BEABC27EF5D110020357D /* SloxEditor.swift */,
 				CD1BEAC827EF6BF90020357D /* Token.swift */,
 				CD1BEAC527EF69210020357D /* TokenType.swift */,
 				CD1BEA9E27EF5AAF0020357D /* Assets.xcassets */,
@@ -97,9 +105,26 @@
 		CD1BEAAA27EF5AAF0020357D /* macOS */ = {
 			isa = PBXGroup;
 			children = (
+				CD1BEABC27EF5D110020357D /* SloxEditor.swift */,
 				CD1BEAAB27EF5AAF0020357D /* macOS.entitlements */,
 			);
 			path = macOS;
+			sourceTree = "<group>";
+		};
+		CD1BEB0028002D390020357D /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				CD3590C42801C63600510576 /* GenerateAST.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		CD1BEB0328002E820020357D /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				CD3590C62801D35400510576 /* Expr.swift */,
+			);
+			path = Generated;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +151,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CD1BEAB727EF5AAF0020357D /* Build configuration list for PBXNativeTarget "Slox (macOS)" */;
 			buildPhases = (
+				CD1BEB0228002E190020357D /* Generate AST classes */,
 				CD1BEAA527EF5AAF0020357D /* Sources */,
 				CD1BEAA627EF5AAF0020357D /* Frameworks */,
 				CD1BEAA727EF5AAF0020357D /* Resources */,
@@ -195,18 +221,42 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		CD1BEB0228002E190020357D /* Generate AST classes */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Generate AST classes";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(SRCROOT)/Generated",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/bin/swift \"${SRCROOT}/Tools/GenerateAST.swift\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CD1BEA9F27EF5AAF0020357D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD1BEABD27EF5D110020357D /* SloxEditor.swift in Sources */,
 				CD1BEAC927EF6BF90020357D /* Token.swift in Sources */,
 				CD1BEAAE27EF5AAF0020357D /* ContentView.swift in Sources */,
 				CD1BEAAC27EF5AAF0020357D /* SloxApp.swift in Sources */,
+				CD3590C72801D35400510576 /* Expr.swift in Sources */,
 				CD1BEAC627EF69210020357D /* TokenType.swift in Sources */,
 				CD1BEAC327EF66300020357D /* Scanner.swift in Sources */,
 				CD1BEAC027EF62B90020357D /* Lox.swift in Sources */,
+				CD3590CA2802AF5300510576 /* AstPrinter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,10 +266,12 @@
 			files = (
 				CD1BEABE27EF5D110020357D /* SloxEditor.swift in Sources */,
 				CD1BEACA27EF6BF90020357D /* Token.swift in Sources */,
+				CD3590CB2802AF5300510576 /* AstPrinter.swift in Sources */,
 				CD1BEAAF27EF5AAF0020357D /* ContentView.swift in Sources */,
 				CD1BEAAD27EF5AAF0020357D /* SloxApp.swift in Sources */,
 				CD1BEAC727EF69210020357D /* TokenType.swift in Sources */,
 				CD1BEAC427EF66300020357D /* Scanner.swift in Sources */,
+				CD3590C82801D35400510576 /* Expr.swift in Sources */,
 				CD1BEAC127EF62B90020357D /* Lox.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
