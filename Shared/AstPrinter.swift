@@ -20,7 +20,11 @@ class AstPrinter: ExprVisitor {
     }
     
     func visitLiteralExpr(_ expr: Literal) -> String {
-        return String(expr.value.description)
+        if let value = expr.value {
+            return String(value.description)
+        } else {
+            return "nil"
+        }
     }
     
     func visitUnaryExpr(_ expr: Unary) -> String {

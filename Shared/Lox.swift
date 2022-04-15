@@ -23,7 +23,13 @@ class Lox {
         output = ""
         let scanner = Scanner(code)
         let tokens = scanner.scanTokens()
-        let output = AstPrinter().print(expr)
+        let parser = Parser(tokens)
+        let expression = parser.parse()
+        // Stop if there was a syntax error
+        if (hadError) {
+            return "hadError"
+        }
+        output = AstPrinter().print(expression!)
         return output;
     }
     func error(_ line: Int, _ message: String) {
@@ -32,5 +38,12 @@ class Lox {
     private func report(_ line: Int, _ location: String, _ message: String) {
         output += "[line \(line)] Error \(location): \(message)\n"
         hadError = true;
+    }
+    func error(_ token: Token, _ message: String) {
+        if (token.type == .EOF) {
+            report(token.line, " at end", message)
+        } else {
+            report(token.line, " at '" + token.lexeme + "''", message)
+        }
     }
 }

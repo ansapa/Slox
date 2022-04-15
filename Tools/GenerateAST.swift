@@ -14,7 +14,7 @@ if let outputDir = getEnvironmentVar("SCRIPT_OUTPUT_FILE_0") {
     defineAst(outputDir, "Expr", [
         "Binary=_ left: Expr, _ oper: Token, _ right: Expr",
         "Grouping=_ expression: Expr",
-        "Literal=_ value: AnyObject",
+        "Literal=_ value: AnyObject?",
         "Unary=_ oper: Token, _ right: Expr"
     ])
 } else {

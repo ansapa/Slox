@@ -26,6 +26,8 @@
 		CD3590C82801D35400510576 /* Expr.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3590C62801D35400510576 /* Expr.swift */; };
 		CD3590CA2802AF5300510576 /* AstPrinter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3590C92802AF5300510576 /* AstPrinter.swift */; };
 		CD3590CB2802AF5300510576 /* AstPrinter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3590C92802AF5300510576 /* AstPrinter.swift */; };
+		CD3590CD2805CAE900510576 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3590CC2805CAE900510576 /* Parser.swift */; };
+		CD3590CE2805CAE900510576 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3590CC2805CAE900510576 /* Parser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,7 @@
 		CD3590C42801C63600510576 /* GenerateAST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateAST.swift; sourceTree = "<group>"; };
 		CD3590C62801D35400510576 /* Expr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Expr.swift; sourceTree = "<group>"; };
 		CD3590C92802AF5300510576 /* AstPrinter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstPrinter.swift; sourceTree = "<group>"; };
+		CD3590CC2805CAE900510576 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Parser.swift; path = Shared/Parser.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +87,7 @@
 				CD3590C92802AF5300510576 /* AstPrinter.swift */,
 				CD1BEA9D27EF5AAE0020357D /* ContentView.swift */,
 				CD1BEABF27EF62B90020357D /* Lox.swift */,
+				CD3590CC2805CAE900510576 /* Parser.swift */,
 				CD1BEAC227EF66300020357D /* Scanner.swift */,
 				CD1BEA9C27EF5AAE0020357D /* SloxApp.swift */,
 				CD1BEAC827EF6BF90020357D /* Token.swift */,
@@ -254,6 +258,7 @@
 				CD1BEAAC27EF5AAF0020357D /* SloxApp.swift in Sources */,
 				CD3590C72801D35400510576 /* Expr.swift in Sources */,
 				CD1BEAC627EF69210020357D /* TokenType.swift in Sources */,
+				CD3590CD2805CAE900510576 /* Parser.swift in Sources */,
 				CD1BEAC327EF66300020357D /* Scanner.swift in Sources */,
 				CD1BEAC027EF62B90020357D /* Lox.swift in Sources */,
 				CD3590CA2802AF5300510576 /* AstPrinter.swift in Sources */,
@@ -266,6 +271,7 @@
 			files = (
 				CD1BEABE27EF5D110020357D /* SloxEditor.swift in Sources */,
 				CD1BEACA27EF6BF90020357D /* Token.swift in Sources */,
+				CD3590CE2805CAE900510576 /* Parser.swift in Sources */,
 				CD3590CB2802AF5300510576 /* AstPrinter.swift in Sources */,
 				CD1BEAAF27EF5AAF0020357D /* ContentView.swift in Sources */,
 				CD1BEAAD27EF5AAF0020357D /* SloxApp.swift in Sources */,
